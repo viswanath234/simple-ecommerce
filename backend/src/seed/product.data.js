@@ -1,0 +1,641 @@
+const Products = [
+  {
+    brand: "FITZDO",
+    title: "Premium Adjustable Yoga Bench",
+    category: "Fitness & Training",
+    description: "Sturdy adjustable yoga bench for advanced yoga practices.",
+    pricing: { price: 3499, mrp: 5999, discountPercent: 42 },
+    rating: { value: 4.5, count: 2145 },
+    media: {
+      thumbnail: "/images/yoga1.png",
+      images: [
+        "/images/yoga1.png",
+        "/images/yoga2.png",
+        "/images/yoga3.png",
+        "/images/yoga4.png",
+      ],
+    },
+    colors: [
+      { name: "Black", hex: "#000000", available: true },
+      { name: "Gray", hex: "#808080", available: true },
+      { name: "Blue", hex: "#0000FF", available: false },
+    ],
+    models: [
+      { name: "Standard", available: true },
+      { name: "Pro", available: true },
+      { name: "Elite", available: false },
+    ],
+    sizes: [
+      { name: "S", available: true },
+      { name: "M", available: true },
+      { name: "L", available: true },
+      { name: "XL", available: false },
+    ],
+    flags: { sponsored: true },
+    delivery: { text: "FREE delivery by Tomorrow 10pm" },
+    inventory: { stock: 40 },
+  },
+
+  {
+    brand: "FITZDO",
+    title: "Heavy Duty Power Resistance Tube Set",
+    category: "Fitness & Training",
+    description: "Complete resistance tube set for full-body workouts.",
+    pricing: { price: 1299, mrp: 2499, discountPercent: 48 },
+    rating: { value: 4.4, count: 5620 },
+    media: {
+      thumbnail: "/images/weight-plates1.png",
+      images: [
+        "/images/weight-plates1.png",
+        "/images/weight-plates2.png",
+        "/images/weight-plates3.png",
+        "/images/weight-plates4.png",
+      ],
+    },
+    colors: [
+      { name: "Red", hex: "#FF0000", available: true },
+      { name: "Blue", hex: "#0000FF", available: true },
+      { name: "Green", hex: "#00AA00", available: true },
+    ],
+    models: [
+      { name: "Light", available: true },
+      { name: "Medium", available: true },
+      { name: "Heavy", available: true },
+    ],
+    sizes: [{ name: "One Size", available: true }],
+    flags: { sponsored: true },
+    delivery: { text: "FREE delivery by Tomorrow 10pm" },
+    inventory: { stock: 95 },
+  },
+
+  {
+    brand: "FITZDO",
+    title: "Professional Ab Roller Wheel",
+    category: "Fitness & Training",
+    description: "Dual-wheel ab roller for core strengthening.",
+    pricing: { price: 499, mrp: 999, discountPercent: 50 },
+    rating: { value: 4.6, count: 8900 },
+    media: {
+      thumbnail: "/images/ab-roller1.png",
+      images: [
+        "/images/ab-roller1.png",
+        "/images/ab-roller2.png",
+        "/images/ab-roller3.png",
+        "/images/ab-roller4.png",
+      ],
+    },
+    colors: [
+      { name: "Black", hex: "#000000", available: true },
+      { name: "Red", hex: "#FF0000", available: true },
+    ],
+    models: [
+      { name: "Standard", available: true },
+      { name: "Pro", available: false },
+    ],
+    sizes: [{ name: "One Size", available: true }],
+    flags: { sponsored: true },
+    delivery: { text: "FREE delivery by Tomorrow 10pm" },
+    inventory: { stock: 130 },
+  },
+
+  {
+    brand: "FITZDO",
+    title: "Skipping Rope with Digital Counter",
+    category: "Fitness & Training",
+    description: "Smart skipping rope with calorie and jump counter.",
+    pricing: { price: 699, mrp: 1499, discountPercent: 53 },
+    rating: { value: 4.3, count: 4400 },
+    media: {
+      thumbnail: "/images/rope_1.png",
+      images: [
+        "/images/rope_1.png",
+        "/images/rope_2.png",
+        "/images/rope_3.png",
+        "/images/rope_4.png",
+      ],
+    },
+    colors: [
+      { name: "Black", hex: "#000000", available: true },
+      { name: "Yellow", hex: "#FFFF00", available: true },
+    ],
+    models: [
+      { name: "Basic", available: true },
+      { name: "Advanced", available: true },
+    ],
+    sizes: [{ name: "One Size", available: true }],
+    flags: { sponsored: true },
+    delivery: { text: "FREE delivery by Tomorrow 10pm" },
+    inventory: { stock: 110 },
+  },
+
+  {
+    brand: "FITZDO",
+    title: "Gym Gloves with Wrist Support",
+    category: "Fitness Accessories",
+    description: "Breathable gym gloves with wrist protection.",
+    pricing: { price: 499, mrp: 999, discountPercent: 50 },
+    rating: { value: 4.3, count: 7800 },
+    media: {
+      thumbnail: "/images/gloves1.png",
+      images: [
+        "/images/gloves1.png",
+        "/images/gloves2.png",
+        "/images/gloves3.png",
+        "/images/gloves4.png",
+      ],
+    },
+    colors: [
+      { name: "Black", hex: "#000000", available: true },
+      { name: "Gray", hex: "#808080", available: true },
+    ],
+    models: [
+      { name: "Standard", available: true },
+      { name: "Premium", available: false },
+    ],
+    sizes: [
+      { name: "S", available: true },
+      { name: "M", available: true },
+      { name: "L", available: true },
+      { name: "XL", available: true },
+    ],
+    flags: { sponsored: true },
+    delivery: { text: "FREE delivery by Tomorrow 10pm" },
+    inventory: { stock: 200 },
+  },
+
+  {
+    brand: "FITZDO",
+    title: "Gym Gloves with Wrist Support",
+    category: "Fitness Accessories",
+    description: "Breathable gym gloves with wrist protection.",
+    pricing: { price: 499, mrp: 999, discountPercent: 50 },
+    rating: { value: 4.3, count: 7800 },
+    media: {
+      thumbnail: "/images/gloves1.png",
+      images: [
+        "/images/gloves1.png",
+        "/images/gloves2.png",
+        "/images/gloves3.png",
+        "/images/gloves4.png",
+      ],
+    },
+    colors: [
+      { name: "Black", hex: "#000000", available: true },
+      { name: "Gray", hex: "#808080", available: true },
+    ],
+    models: [
+      { name: "Standard", available: true },
+      { name: "Premium", available: false },
+    ],
+    sizes: [
+      { name: "S", available: true },
+      { name: "M", available: true },
+      { name: "L", available: true },
+      { name: "XL", available: true },
+    ],
+    flags: { sponsored: true },
+    delivery: { text: "FREE delivery by Tomorrow 10pm" },
+    inventory: { stock: 200 },
+  },
+
+  {
+    brand: "FITZDO",
+    title: "PVC Kettlebell 12kg",
+    category: "Fitness & Training",
+    description: "PVC coated kettlebell ideal for home workouts.",
+    pricing: { price: 1499, mrp: 2999, discountPercent: 50 },
+    rating: { value: 4.6, count: 5020 },
+    media: {
+      thumbnail: "/images/kettlebell1.png",
+      images: [
+        "/images/kettlebell1.png",
+        "/images/kettlebell2.png",
+        "/images/kettlebell3.png",
+        "/images/kettlebell4.png",
+      ],
+    },
+    colors: [
+      { name: "Black", hex: "#000000", available: true },
+      { name: "Red", hex: "#FF0000", available: true },
+      { name: "Blue", hex: "#0000FF", available: true },
+    ],
+    models: [
+      { name: "12kg", available: true },
+      { name: "16kg", available: false },
+      { name: "20kg", available: true },
+    ],
+    sizes: [{ name: "One Size", available: true }],
+    flags: { sponsored: true },
+    delivery: { text: "FREE delivery by Tomorrow 10pm" },
+    inventory: { stock: 75 },
+  },
+
+  {
+    brand: "FITZDO",
+    title: "Smart Fitness Band with Heart Rate Monitor",
+    category: "Electronics",
+    description: "Smart fitness band with sleep and heart rate tracking.",
+    pricing: { price: 1999, mrp: 3499, discountPercent: 43 },
+    rating: { value: 4.2, count: 10250 },
+    media: {
+      thumbnail: "/images/band1.png",
+      images: [
+        "/images/band1.png",
+        "/images/band2.png",
+        "/images/band3.png",
+        "/images/band4.png",
+      ],
+    },
+    colors: [
+      { name: "Black", hex: "#000000", available: true },
+      { name: "Blue", hex: "#0000FF", available: true },
+      { name: "Gold", hex: "#FFD700", available: true },
+    ],
+    models: [
+      { name: "Standard", available: true },
+      { name: "Pro", available: false },
+    ],
+    sizes: [
+      { name: "S", available: true },
+      { name: "M", available: true },
+      { name: "L", available: true },
+    ],
+    flags: { sponsored: true },
+    delivery: { text: "FREE delivery by Tomorrow 10pm" },
+    inventory: { stock: 120 },
+  },
+
+  {
+    brand: "FITZDO",
+    title: "Premium Adjustable Yoga Bench",
+    category: "Fitness & Training",
+    description: "Sturdy adjustable yoga bench for advanced yoga practices.",
+    pricing: { price: 3499, mrp: 5999, discountPercent: 42 },
+    rating: { value: 4.5, count: 2145 },
+    media: {
+      thumbnail: "/images/yoga1.png",
+      images: [
+        "/images/yoga1.png",
+        "/images/yoga2.png",
+        "/images/yoga3.png",
+        "/images/yoga4.png",
+      ],
+    },
+    colors: [
+      { name: "Black", hex: "#000000", available: true },
+      { name: "Gray", hex: "#808080", available: true },
+      { name: "Blue", hex: "#0000FF", available: false },
+    ],
+    models: [
+      { name: "Standard", available: true },
+      { name: "Pro", available: true },
+      { name: "Elite", available: false },
+    ],
+    sizes: [
+      { name: "S", available: true },
+      { name: "M", available: true },
+      { name: "L", available: true },
+      { name: "XL", available: false },
+    ],
+    flags: { sponsored: true },
+    delivery: { text: "FREE delivery by Tomorrow 10pm" },
+    inventory: { stock: 40 },
+  },
+
+  {
+    brand: "FITZDO",
+    title: "Skipping Rope with Digital Counter",
+    category: "Fitness & Training",
+    description: "Smart skipping rope with calorie and jump counter.",
+    pricing: { price: 699, mrp: 1499, discountPercent: 53 },
+    rating: { value: 4.3, count: 4400 },
+    media: {
+      thumbnail: "/images/rope_1.png",
+      images: [
+        "/images/rope_1.png",
+        "/images/rope_2.png",
+        "/images/rope_3.png",
+        "/images/rope_4.png",
+      ],
+    },
+    colors: [
+      { name: "Black", hex: "#000000", available: true },
+      { name: "Yellow", hex: "#FFFF00", available: true },
+    ],
+    models: [
+      { name: "Basic", available: true },
+      { name: "Advanced", available: true },
+    ],
+    sizes: [{ name: "One Size", available: true }],
+    flags: { sponsored: true },
+    delivery: { text: "FREE delivery by Tomorrow 10pm" },
+    inventory: { stock: 110 },
+  },
+
+  {
+    brand: "FITZDO",
+    title: "Gym Gloves with Wrist Support",
+    category: "Fitness Accessories",
+    description: "Breathable gym gloves with wrist protection.",
+    pricing: { price: 499, mrp: 999, discountPercent: 50 },
+    rating: { value: 4.3, count: 7800 },
+    media: {
+      thumbnail: "/images/gloves1.png",
+      images: [
+        "/images/gloves1.png",
+        "/images/gloves2.png",
+        "/images/gloves3.png",
+        "/images/gloves4.png",
+      ],
+    },
+    colors: [
+      { name: "Black", hex: "#000000", available: true },
+      { name: "Gray", hex: "#808080", available: true },
+    ],
+    models: [
+      { name: "Standard", available: true },
+      { name: "Premium", available: false },
+    ],
+    sizes: [
+      { name: "S", available: true },
+      { name: "M", available: true },
+      { name: "L", available: true },
+      { name: "XL", available: true },
+    ],
+    flags: { sponsored: true },
+    delivery: { text: "FREE delivery by Tomorrow 10pm" },
+    inventory: { stock: 200 },
+  },
+
+  {
+    brand: "FITZDO",
+    title: "Professional Ab Roller Wheel",
+    category: "Fitness & Training",
+    description: "Dual-wheel ab roller for core strengthening.",
+    pricing: { price: 499, mrp: 999, discountPercent: 50 },
+    rating: { value: 4.6, count: 8900 },
+    media: {
+      thumbnail: "/images/ab-roller1.png",
+      images: [
+        "/images/ab-roller1.png",
+        "/images/ab-roller2.png",
+        "/images/ab-roller3.png",
+        "/images/ab-roller4.png",
+      ],
+    },
+    colors: [
+      { name: "Black", hex: "#000000", available: true },
+      { name: "Red", hex: "#FF0000", available: true },
+    ],
+    models: [
+      { name: "Standard", available: true },
+      { name: "Pro", available: false },
+    ],
+    sizes: [{ name: "One Size", available: true }],
+    flags: { sponsored: true },
+    delivery: { text: "FREE delivery by Tomorrow 10pm" },
+    inventory: { stock: 130 },
+  },
+
+  {
+    brand: "FITZDO",
+    title: "Premium Adjustable Yoga Bench",
+    category: "Fitness & Training",
+    description: "Sturdy adjustable yoga bench for advanced yoga practices.",
+    pricing: { price: 3499, mrp: 5999, discountPercent: 42 },
+    rating: { value: 4.5, count: 2145 },
+    media: {
+      thumbnail: "/images/yoga1.png",
+      images: [
+        "/images/yoga1.png",
+        "/images/yoga2.png",
+        "/images/yoga3.png",
+        "/images/yoga4.png",
+      ],
+    },
+    colors: [
+      { name: "Black", hex: "#000000", available: true },
+      { name: "Gray", hex: "#808080", available: true },
+      { name: "Blue", hex: "#0000FF", available: false },
+    ],
+    models: [
+      { name: "Standard", available: true },
+      { name: "Pro", available: true },
+      { name: "Elite", available: false },
+    ],
+    sizes: [
+      { name: "S", available: true },
+      { name: "M", available: true },
+      { name: "L", available: true },
+      { name: "XL", available: false },
+    ],
+    flags: { sponsored: true },
+    delivery: { text: "FREE delivery by Tomorrow 10pm" },
+    inventory: { stock: 40 },
+  },
+
+  {
+    brand: "FITZDO",
+    title: "Gym Gloves with Wrist Support",
+    category: "Fitness Accessories",
+    description: "Breathable gym gloves with wrist protection.",
+    pricing: { price: 499, mrp: 999, discountPercent: 50 },
+    rating: { value: 4.3, count: 7800 },
+    media: {
+      thumbnail: "/images/gloves1.png",
+      images: [
+        "/images/gloves1.png",
+        "/images/gloves2.png",
+        "/images/gloves3.png",
+        "/images/gloves4.png",
+      ],
+    },
+    colors: [
+      { name: "Black", hex: "#000000", available: true },
+      { name: "Gray", hex: "#808080", available: true },
+    ],
+    models: [
+      { name: "Standard", available: true },
+      { name: "Premium", available: false },
+    ],
+    sizes: [
+      { name: "S", available: true },
+      { name: "M", available: true },
+      { name: "L", available: true },
+      { name: "XL", available: true },
+    ],
+    flags: { sponsored: true },
+    delivery: { text: "FREE delivery by Tomorrow 10pm" },
+    inventory: { stock: 200 },
+  },
+
+  {
+    brand: "FITZDO",
+    title: "Professional Ab Roller Wheel",
+    category: "Fitness & Training",
+    description: "Dual-wheel ab roller for core strengthening.",
+    pricing: { price: 499, mrp: 999, discountPercent: 50 },
+    rating: { value: 4.6, count: 8900 },
+    media: {
+      thumbnail: "/images/ab-roller1.png",
+      images: [
+        "/images/ab-roller1.png",
+        "/images/ab-roller2.png",
+        "/images/ab-roller3.png",
+        "/images/ab-roller4.png",
+      ],
+    },
+    colors: [
+      { name: "Black", hex: "#000000", available: true },
+      { name: "Red", hex: "#FF0000", available: true },
+    ],
+    models: [
+      { name: "Standard", available: true },
+      { name: "Pro", available: false },
+    ],
+    sizes: [{ name: "One Size", available: true }],
+    flags: { sponsored: true },
+    delivery: { text: "FREE delivery by Tomorrow 10pm" },
+    inventory: { stock: 130 },
+  },
+  {
+    brand: "FITZDO",
+    title: "Premium Adjustable Yoga Bench",
+    category: "Fitness & Training",
+    description: "Sturdy adjustable yoga bench for advanced yoga practices.",
+    pricing: { price: 3499, mrp: 5999, discountPercent: 42 },
+    rating: { value: 4.5, count: 2145 },
+    media: {
+      thumbnail: "/images/yoga1.png",
+      images: [
+        "/images/yoga1.png",
+        "/images/yoga2.png",
+        "/images/yoga3.png",
+        "/images/yoga4.png",
+      ],
+    },
+    colors: [
+      { name: "Black", hex: "#000000", available: true },
+      { name: "Gray", hex: "#808080", available: true },
+      { name: "Blue", hex: "#0000FF", available: false },
+    ],
+    models: [
+      { name: "Standard", available: true },
+      { name: "Pro", available: true },
+      { name: "Elite", available: false },
+    ],
+    sizes: [
+      { name: "S", available: true },
+      { name: "M", available: true },
+      { name: "L", available: true },
+      { name: "XL", available: false },
+    ],
+    flags: { sponsored: true },
+    delivery: { text: "FREE delivery by Tomorrow 10pm" },
+    inventory: { stock: 40 },
+  },
+
+  {
+    brand: "FITZDO",
+    title: "Gym Gloves with Wrist Support",
+    category: "Fitness Accessories",
+    description: "Breathable gym gloves with wrist protection.",
+    pricing: { price: 499, mrp: 999, discountPercent: 50 },
+    rating: { value: 4.3, count: 7800 },
+    media: {
+      thumbnail: "/images/gloves1.png",
+      images: [
+        "/images/gloves1.png",
+        "/images/gloves2.png",
+        "/images/gloves3.png",
+        "/images/gloves4.png",
+      ],
+    },
+    colors: [
+      { name: "Black", hex: "#000000", available: true },
+      { name: "Gray", hex: "#808080", available: true },
+    ],
+    models: [
+      { name: "Standard", available: true },
+      { name: "Premium", available: false },
+    ],
+    sizes: [
+      { name: "S", available: true },
+      { name: "M", available: true },
+      { name: "L", available: true },
+      { name: "XL", available: true },
+    ],
+    flags: { sponsored: true },
+    delivery: { text: "FREE delivery by Tomorrow 10pm" },
+    inventory: { stock: 200 },
+  },
+
+  {
+    brand: "FITZDO",
+    title: "Premium Adjustable Yoga Bench",
+    category: "Fitness & Training",
+    description: "Sturdy adjustable yoga bench for advanced yoga practices.",
+    pricing: { price: 3499, mrp: 5999, discountPercent: 42 },
+    rating: { value: 4.5, count: 2145 },
+    media: {
+      thumbnail: "/images/yoga1.png",
+      images: [
+        "/images/yoga1.png",
+        "/images/yoga2.png",
+        "/images/yoga3.png",
+        "/images/yoga4.png",
+      ],
+    },
+    colors: [
+      { name: "Black", hex: "#000000", available: true },
+      { name: "Gray", hex: "#808080", available: true },
+      { name: "Blue", hex: "#0000FF", available: false },
+    ],
+    models: [
+      { name: "Standard", available: true },
+      { name: "Pro", available: true },
+      { name: "Elite", available: false },
+    ],
+    sizes: [
+      { name: "S", available: true },
+      { name: "M", available: true },
+      { name: "L", available: true },
+      { name: "XL", available: false },
+    ],
+    flags: { sponsored: true },
+    delivery: { text: "FREE delivery by Tomorrow 10pm" },
+    inventory: { stock: 40 },
+  },
+
+  {
+    brand: "FITZDO",
+    title: "Skipping Rope with Digital Counter",
+    category: "Fitness & Training",
+    description: "Smart skipping rope with calorie and jump counter.",
+    pricing: { price: 699, mrp: 1499, discountPercent: 53 },
+    rating: { value: 4.3, count: 4400 },
+    media: {
+      thumbnail: "/images/rope_1.png",
+      images: [
+        "/images/rope_1.png",
+        "/images/rope_2.png",
+        "/images/rope_3.png",
+        "/images/rope_4.png",
+      ],
+    },
+    colors: [
+      { name: "Black", hex: "#000000", available: true },
+      { name: "Yellow", hex: "#FFFF00", available: true },
+    ],
+    models: [
+      { name: "Basic", available: true },
+      { name: "Advanced", available: true },
+    ],
+    sizes: [{ name: "One Size", available: true }],
+    flags: { sponsored: true },
+    delivery: { text: "FREE delivery by Tomorrow 10pm" },
+    inventory: { stock: 110 },
+  },
+];
+
+module.exports = Products;
