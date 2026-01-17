@@ -6,11 +6,6 @@ const ProductBuyBox = ({ product }) => {
   const models = product?.models || [];
   const sizes = product?.sizes || [];
 
-  console.log("Product data:", product);
-  console.log("Colors:", colors);
-  console.log("Models:", models);
-  console.log("Sizes:", sizes);
-
   const [selectedColor, setSelectedColor] = useState(colors[0] || null);
   const [selectedSize, setSelectedSize] = useState(null);
   const [selectedModel, setSelectedModel] = useState(

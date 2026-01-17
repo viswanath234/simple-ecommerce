@@ -8,13 +8,10 @@ const seedProducts = async () => {
   try {
     await connectDB();
 
-    console.log("Clearing existing products...");
     await Product.deleteMany();
 
-    console.log("Inserting products...");
     await Product.insertMany(products);
 
-    console.log("Products seeded successfully");
     process.exit();
   } catch (error) {
     console.error("Seeding failed", error);
